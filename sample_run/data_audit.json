@@ -1,0 +1,194 @@
+{
+  "offline_buffer_threshold_seconds": 600,
+  "offline_buffer_definition": "app_open with received_at - occurred_at > threshold. Negative gaps are device clocks ahead of the server and are counted separately.",
+  "events": {
+    "lines": 142906,
+    "unique_event_ids": 140730,
+    "duplicate_event_ids": 2176,
+    "extra_lines": 2176,
+    "users": 4759,
+    "event_types_canonical": {
+      "app_dialect_changed": 204,
+      "app_open": 37477,
+      "episode_completed": 6500,
+      "home_viewed": 31857,
+      "login_success": 2540,
+      "message_clicked": 5,
+      "message_delivered": 397,
+      "notification_opt_out": 21,
+      "paywall_viewed": 479,
+      "play_progress": 26649,
+      "play_started": 13576,
+      "purchase_completed": 236,
+      "search": 2879,
+      "signup_completed": 764,
+      "subscription_lapsed": 239,
+      "subscription_renewed": 876,
+      "title_viewed": 16031
+    },
+    "app_dialect_counts_canonical": {
+      "<missing>": 3204,
+      "NA": 517,
+      "d1": 39705,
+      "d2": 38587,
+      "d3": 18282,
+      "d4": 15283,
+      "d5": 12282,
+      "d6": 9395,
+      "d7": 3475
+    },
+    "missing_timestamps": 0,
+    "negative_received_or_sent_vs_occurred": 2854,
+    "received_minus_occurred_seconds": {
+      "count": 140730,
+      "min": -106379.087,
+      "p50": 1.825,
+      "p95": 119792.079,
+      "p99": 629322.748,
+      "max": 782651.211,
+      "negative": 2854,
+      "over_600s": 16353,
+      "over_3600s": 12929,
+      "over_86400s": 7618
+    },
+    "sent_minus_occurred_seconds": {
+      "count": 140730,
+      "min": 0.0,
+      "p50": 0.0,
+      "p95": 117205.624,
+      "p99": 629320.405,
+      "max": 777328.774,
+      "negative": 0,
+      "over_600s": 15402,
+      "over_3600s": 11864,
+      "over_86400s": 7400
+    },
+    "app_open_canonical": 37477,
+    "offline_buffered_app_open_canonical": 4409,
+    "campaign_deeplinks_canonical": 4508,
+    "deeplink_dialect_conflicts_canonical": 1941
+  },
+  "profiles": {
+    "rows": 4888,
+    "unique_users": 4858,
+    "duplicate_users": 30,
+    "event_users_without_profile": 50,
+    "profile_users_without_events": 149,
+    "profile_vs_latest_event_dialect_conflicts": 1464
+  },
+  "catalogue": {
+    "titles": 2014,
+    "unique_content_slugs": 1500,
+    "slugs_with_multiple_title_ids": 514,
+    "slugs_spanning_dialects": 0,
+    "inverted_availability_windows": [
+      "T0087",
+      "T0313",
+      "T0574",
+      "T0591",
+      "T0663",
+      "T0823",
+      "T0873",
+      "T1128",
+      "T1312",
+      "T1418",
+      "T1598",
+      "T1720",
+      "T1990"
+    ],
+    "prompt_injection_title_ids": [
+      "T0002"
+    ]
+  },
+  "goals_missing_success_event": [
+    {
+      "goal_id": "G10",
+      "success_event": null,
+      "reason": "success event is null"
+    },
+    {
+      "goal_id": "G11",
+      "success_event": "tv_app_open",
+      "reason": "success event is absent from data/events.jsonl"
+    }
+  ],
+  "replay": {
+    "triggers": {
+      "path": "replay/triggers.jsonl",
+      "lines": 2769,
+      "unique_event_ids": 2679,
+      "duplicate_event_ids": 90,
+      "extra_lines": 90,
+      "users": 1746,
+      "types": {
+        "app_open": 2558,
+        "login_success": 211
+      }
+    },
+    "live_events": {
+      "path": "replay/live_events.jsonl",
+      "lines": 607,
+      "unique_event_ids": 600,
+      "duplicate_event_ids": 7,
+      "extra_lines": 7,
+      "users": 245,
+      "types": {
+        "app_open": 118,
+        "episode_completed": 29,
+        "home_viewed": 100,
+        "login_success": 10,
+        "paywall_viewed": 4,
+        "play_progress": 105,
+        "play_started": 44,
+        "purchase_completed": 38,
+        "search": 10,
+        "signup_completed": 94,
+        "title_viewed": 55
+      }
+    },
+    "controls": {
+      "path": "replay/control_events.jsonl",
+      "lines": 4,
+      "unique_event_ids": null,
+      "duplicate_event_ids": null,
+      "extra_lines": null,
+      "users": 0,
+      "types": {
+        "dependency_degraded": 1,
+        "dependency_unavailable": 1,
+        "goal_rule_corrected": 1,
+        "title_withdrawn": 1
+      }
+    },
+    "model_faults": {
+      "path": "replay/model_faults.jsonl",
+      "lines": 5,
+      "unique_event_ids": null,
+      "duplicate_event_ids": null,
+      "extra_lines": null,
+      "users": 5,
+      "types": {
+        "malformed_output": 1,
+        "timeout": 1,
+        "unsupported_claim": 3
+      }
+    },
+    "arms": {
+      "agent": 2513,
+      "holdout": 2487
+    },
+    "arm_rows": 5000
+  },
+  "pilot_outcome_counts_by_arm": {
+    "treatment": {
+      "users": 1912,
+      "successes": 349
+    },
+    "holdout": {
+      "users": 1979,
+      "successes": 387
+    },
+    "assignment_rows": 3891,
+    "outcome_rows": 3891
+  }
+}

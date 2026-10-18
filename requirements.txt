@@ -1,0 +1,3 @@
+# Core replay uses the Python 3.11+ standard library only.
+# pytest is required to run the test suite and is not imported by the replay path.
+pytest>=8

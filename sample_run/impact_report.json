@@ -1,0 +1,61 @@
+{
+  "replay": {
+    "analysis": "intention_to_treat",
+    "denominator": "all users in replay/arms.csv",
+    "agent": {
+      "users": 2513,
+      "successes": 62,
+      "rate": 0.024671707122960605,
+      "with_goal": 862,
+      "with_action": 703
+    },
+    "holdout": {
+      "users": 2487,
+      "successes": 76,
+      "rate": 0.0305589063128267,
+      "with_goal": 883,
+      "with_action": 0
+    },
+    "absolute_uplift_pp": -0.5887199189866095,
+    "ci95_diff": {
+      "diff": -0.005887199189866094,
+      "low": -0.014972677551506568,
+      "high": 0.0031982791717743795,
+      "method": "normal approximation for difference in independent proportions"
+    },
+    "notes": [
+      "Users remain in their assigned arm whether or not they triggered, were eligible, or were served.",
+      "Success is any judged SUCCEEDED goal outcome for that user. Users with no goal count as non-success."
+    ]
+  },
+  "pilot": {
+    "analysis": "pilot_randomized_arm_itt",
+    "treatment": {
+      "users": 1912,
+      "successes": 349,
+      "rate": 0.18253138075313807
+    },
+    "holdout": {
+      "users": 1979,
+      "successes": 387,
+      "rate": 0.1955533097524002
+    },
+    "absolute_uplift_pp": -1.3021928999262133,
+    "ci95_diff": {
+      "diff": -0.013021928999262133,
+      "low": -0.037622184440983544,
+      "high": 0.011578326442459277,
+      "method": "normal approximation for difference in independent proportions"
+    },
+    "biased_served_vs_others": {
+      "served_users": 217,
+      "served_rate": 0.4009216589861751,
+      "all_other_users": 3674,
+      "all_other_rate": 0.17664670658682635,
+      "absolute_uplift_pp": 22.427495239934874
+    },
+    "selection_bias_explanation": "The internal headline compared users the agent chose to serve with everyone else. Served users were selected by the agent and were already more likely to succeed. The randomized comparison keeps every treatment-arm user in the treatment denominator, including those never served, and compares that group with the holdout arm.",
+    "assignment_rows": 3891,
+    "outcome_rows": 3891
+  }
+}

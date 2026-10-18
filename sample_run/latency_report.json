@@ -1,0 +1,10 @@
+{
+  "count": 2679,
+  "p50": 7,
+  "p95": 50,
+  "p99": 65,
+  "max": 119,
+  "over_60s": 0,
+  "over_5m": 0,
+  "method": "wall-clock processing time per trigger; published_at = deliver_at + decided_in_ms. Injected timeouts do not sleep."
+}
